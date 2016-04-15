@@ -5,7 +5,8 @@ module.exports = {
     },
     output: {
         path: __dirname,
-        filename: "./dist/[name].js"
+        filename: "./dist/[name].js",
+        sourceMapFilename: "./dist/[name].map"
     },
     resolve: {
         extensions: ['', '.js', '.ts']
@@ -14,5 +15,6 @@ module.exports = {
         loaders: [
             { test: /\.ts?$/, loader: 'ts-loader' }
         ]
-    }
+    },
+    devtool: "#source-map"
 };
